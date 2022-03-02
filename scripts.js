@@ -37,7 +37,7 @@ function updateScore() {
     pScore.textContent = `Your score: ${playerScore}`;
 
     if (playerScore === 5) {
-        let gameOver = document.createElement('h1');
+        let gameOver = document.createElement('h1');        // appends 'You win/You lose' alerts and disables buttons once score limit is hit
         main.appendChild(gameOver);
         gameOver.textContent = 'You win! Please refresh to play again.';
         disableButton();
@@ -50,7 +50,7 @@ function updateScore() {
 }
 updateScore();
 
-function showRoundResult() {
+function showRoundResult() {      // appends each round's results and then removes it when score limit is hit
     main.appendChild(roundResult);
     roundResult.textContent = result;
 
@@ -78,7 +78,7 @@ scissorsBtn.addEventListener('click', () => {
 });
 
 
-function disableButton() {
+function disableButton() {      // disables buttons when score limit is hit
     rockBtn.disabled = true;
     paperBtn.disabled = true;
     scissorsBtn.disabled = true;
