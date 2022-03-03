@@ -33,16 +33,16 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function updateScore() {
-    cScore.textContent = `Computer score: ${computerScore}`;
-    pScore.textContent = `Your score: ${playerScore}`;
+    cScore.textContent = `Computer: ${computerScore}`;
+    pScore.textContent = `You: ${playerScore}`;
 
     if (playerScore === 5) {
-        let gameOver = document.createElement('h1');        // appends 'You win/You lose' alerts and disables buttons once score limit is hit
+        let gameOver = document.createElement('h3');        // appends 'You win/You lose' alerts and disables buttons once score limit is hit
         main.appendChild(gameOver);
         gameOver.textContent = 'You win! Please refresh to play again.';
         disableButton();
     } else if (computerScore === 5) {
-        let gameOver = document.createElement('h1');
+        let gameOver = document.createElement('h3');
         main.appendChild(gameOver);
         gameOver.textContent = 'You lose! Please refresh to play again.';
         disableButton();
@@ -83,22 +83,3 @@ function disableButton() {      // disables buttons when score limit is hit
     paperBtn.disabled = true;
     scissorsBtn.disabled = true;
 }
-
-// function game() {
-//     for (i = 0; i < 5; i++) {
-//         playRound(playersMove(), computersMove());
-//         console.log(result);
-//     }
-//     console.log(`You scored ${playerScore} and the computer scored ${computerScore}.`);
-// }
-
-// game();
-
-
-
-
-
-
-
-
-

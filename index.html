@@ -6,16 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Space+Mono&display=swap" rel="stylesheet">
     <script src="scripts.js" defer></script>
 </head>
 <body>
     <main>
-        <button class="rock">Rock</button>
-        <button class="paper">Paper</button>
-        <button class="scissors">Scissors</button>
-        <p class="player-score"></p>
-        <p class="computer-score"></p>
+        <h1>First to five. Will you be victorious?</h1>
+        <div class="buttons">
+            <button class="rock">Rock</button>
+            <button class="paper">Paper</button>
+            <button class="scissors">Scissors</button>
+        </div>
+        <h4>Score:</h4>
+        <div class="scores">
+            <p class="player-score"></p>
+            <p class="computer-score"></p>
+        </div>
         <p class="result"></p>
+        <img src="images/Gaben.png" id="gaben">
+        <audio autoplay>
+            <source src="audio/Endor - Pump It Up.mp3">
+        </audio>
     </main>
 </body>
 </html>

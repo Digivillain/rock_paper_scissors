@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+html {
+    background-color: rgb(238, 238, 238);
+    font-family: 'Space Mono', monospace;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h4 {
+    font-size: 20px;
+    text-align: center;
+}
+
+div.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+button {
+    padding: 15px 25px;
+    border: 2px solid black;
+}
+
+div.scores {
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+main p,
+main h3 {
+    text-align: center;
+}
+
+#gaben {
+    max-width: 10%;
+    position: absolute; bottom: 0px; right: 0px
+}
