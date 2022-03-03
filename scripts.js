@@ -2,6 +2,8 @@ let playerScore = 0;
 let computerScore = 0;
 let result;
 let roundResult = document.createElement('p');
+const img = document.querySelector('#gaben');
+const audio = document.querySelector('audio');
 const main = document.querySelector('main');
 const pScore = document.querySelector('.player-score');
 const cScore = document.querySelector('.computer-score');
@@ -59,22 +61,30 @@ function showRoundResult() {      // appends each round's results and then remov
     }
 }
 
+function pumpItUp() {
+    audio.play();
+    img.classList.add('animate');
+}
+
 rockBtn.addEventListener('click', () => {
     playRound('rock', computersMove());
     updateScore();
     showRoundResult()
+    pumpItUp();
 });
 
 paperBtn.addEventListener('click', () => {
     playRound('paper', computersMove());
     updateScore();
-    showRoundResult()
+    showRoundResult();
+    pumpItUp();
 });
 
 scissorsBtn.addEventListener('click', () => {
     playRound('scissors', computersMove());
     updateScore();
-    showRoundResult()
+    showRoundResult();
+    pumpItUp();
 });
 
 
@@ -83,3 +93,4 @@ function disableButton() {      // disables buttons when score limit is hit
     paperBtn.disabled = true;
     scissorsBtn.disabled = true;
 }
+
